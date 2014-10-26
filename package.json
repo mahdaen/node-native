@@ -1,0 +1,31 @@
+{
+  "name": "node-native",
+  "version": "0.1.1",
+  "description": "NodeJS Native Helper",
+  "keywords": [
+    "native",
+    "foreach",
+    "isString",
+    "isArray"
+  ],
+  "repository": [
+    {
+      "type": "git",
+      "url": "http://gitlab.com:babonkit/node-native.git"
+    },
+    {
+      "type": "git",
+      "url": "http://github.com:mahdaen/node-native.git"
+    }
+  ],
+  "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name>",
+  "license": "MIT",
+  "main": "main",
+  "dependencies": {
+    "cli-color": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  }
+}
