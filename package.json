@@ -15,7 +15,7 @@
   "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name>",
   "license": "MIT",
   "dependencies": {
-    "cli-color": "*"
+    "cli-color": "^0.3.2"
   },
   "devDependencies": {},
   "scripts": {
