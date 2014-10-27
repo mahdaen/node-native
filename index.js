@@ -150,7 +150,7 @@ var Native = {
 
     func: function(name, handler) {
         if (Native.isString(name)) {
-            if (Native.isDefined(handler)) {
+            if (Native.isFunction(handler)) {
                 if (!global.__functions.hasOwnProperty(name)) {
                     global.__functions[name] = handler;
 
@@ -160,7 +160,7 @@ var Native = {
                 }
             } else {
                 if (global.__functions.hasOwnProperty(name)) {
-                    return global.__functions(name);
+                    return global.__functions[name];
                 } else {
                     return console.warn('Function "' + name + '" is undefined!');
                 }
