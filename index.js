@@ -1,3 +1,5 @@
+'use strict';
+
 /* Loading Dependencies */
 var clc = require('cli-color');
 
