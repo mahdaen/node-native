@@ -228,12 +228,12 @@ var Native = {
     },
     warn: function(key, msg) {
         if (Native.isString(key) && Native.isString(msg)) {
-            console.log(clc.bold[config.warn.key]('' + key + ' said: ') + clc[config.warn.msg](msg));
+            console.warn(clc.bold[config.warn.key]('' + key + ' said: ') + clc[config.warn.msg](msg));
         }
     },
     error: function(key, msg) {
         if (Native.isString(key) && Native.isString(msg)) {
-            console.log(clc.bold[config.error.key]('' + key + ' said: ') + clc[config.error.msg](msg));
+            console.error(clc.bold[config.error.key]('' + key + ' said: ') + clc[config.error.msg](msg));
         }
     },
 }
