@@ -14,7 +14,6 @@
   },
   "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name>",
   "license": "MIT",
-  "main": "main",
   "dependencies": {
     "cli-color": "*"
   },
