@@ -67,25 +67,25 @@ var Native = {
      * @param func {funtion:required} - Function that will be called in each loop. For array, we give "value" and "index" as arguments. For object, we give "key" and "value" as arguments.
      * @returns {object itself}
      */
-    foreach: function(object, func) {
+    foreach: function(object, func, thisArg) {
         if (Native.isFunction(func)) {
             if (Native.isArray(object) && Native.isFunction(func)) {
                 for (var i = 0; i < object.length; ++i) {
-                    func(object[i], i);
+                    func.call(thisArg, object[i], i);
                 }
             } else if (Native.isObject(object) && Native.isFunction(func)) {
                 for (var key in object) {
                     if (object.hasOwnProperty(key)) {
-                        func(key, object[key]);
+                        func.call(thisArg, key, object[key]);
                     }
                 }
             } else if (Native.isNumber(object) && Native.isFunction(func)) {
                 for (var i = 1; i <= object; ++i) {
-                    func(i);
+                    func.call(thisArg, i);
                 }
             } else if (Native.isString(object) && Native.isFunction(func)) {
                 for (var i = 0; i < object.length; ++i) {
-                    func(object.charAt(i), (i + 1));
+                    func.call(thisArg, object.charAt(i), (i + 1));
                 }
             } else {
                 return console.error('Invalid arguments!');
