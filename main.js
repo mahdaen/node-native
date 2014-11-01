@@ -240,7 +240,7 @@ var Native = {
     include: function(path) {
         var scr = fs.readFileSync(path, 'utf8');
         return function() {
-            eval(src);
+            eval(scr);
         }
     }
 }
