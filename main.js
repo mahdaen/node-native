@@ -1,5 +1,6 @@
 /* Loading Dependencies */
 var clc = require('cli-color');
+var fs = require('fs');
 
 /* Creating Global Variables */
 global.__variables = {};
@@ -236,6 +237,12 @@ var Native = {
             console.log(clc.bold[config.error.key]('' + key + ' said: ') + clc[config.error.msg](msg));
         }
     },
+    include: function(path) {
+        var scr = fs.readFileSync(path);
+        return function() {
+            eval(src);
+        }
+    }
 }
 
 /* Exporting Module */
