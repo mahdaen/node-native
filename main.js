@@ -238,10 +238,7 @@ var Native = {
         }
     },
     include: function(path) {
-        var scr = fs.readFileSync(path, 'utf8');
-        return function() {
-            eval(scr);
-        }
+        eval(fs.readFileSync(path, 'utf8'));
     }
 }
 
