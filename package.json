@@ -14,11 +14,9 @@
   },
   "author": "Nanang Mahdaen El Agung <nanang@mahdaen.name>",
   "license": "MIT",
-  "main": "main",
   "dependencies": {
-    "cli-color": "*"
+    "cli-color": "^0.3.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
